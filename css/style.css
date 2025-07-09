@@ -1,0 +1,166 @@
+/* This imports the 'Monsieur La Doulaise' font from the google font repository */
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Kaushan+Script&family=Luckiest+Guy&family=Monsieur+La+Doulaise&family=Mr+Dafoe&display=swap");
+
+/* This imports the Luckiest Guy font from the same repository */
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Delius&family=Kaushan+Script&family=Luckiest+Guy&family=Monsieur+La+Doulaise&family=Mr+Dafoe&display=swap");
+/* I include a gradient here to imply soft lighting */
+body {
+	background: linear-gradient(to bottom, dimgrey, white);
+	font-family: delius;
+	justify-content: center;
+	line-height: 1.5;
+}
+header {
+	text-align: center;
+}
+.logo img {
+	max-width: 100%;
+	box-shadow: -0.5rem -0.5rem 2rem black, 0.15rem 0.15rem 0.25rem black,
+		0.35rem 0.6rem 0.2rem dimgrey, 0.35rem 0.6rem 1rem dimgrey;
+	border-radius: 10px;
+    border: solid thick black;
+}
+/* I spruced up my heading font to make it a little more 'Miami Ink' */
+h1,
+h2 {
+	font-family: kaushan script;
+	text-shadow: 0.05rem -0.05rem white, 0.05rem 0.05rem white, 0.05rem 0 white,
+		0 0.09rem white, -0.05rem 0 white, 0 -0.05rem white, -0.05rem 0.05rem white,
+		-0.05rem -0.05rem white, 0.05rem -0.05rem white, 0.05rem 0.05rem white,
+		0.1rem 0.1rem 0.3rem;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 2rem;
+	max-height: min-content;
+}
+/* This card goes to the right. It's sized to fit my content */
+.infocard {
+	display: flex;
+	flex-flow: column;
+	border-radius: 10px;
+	justify-items: center;
+	justify-self: center;
+	grid-column: 5 / 6;
+	background: gainsboro;
+	height: max-content;
+	padding: 1rem;
+	border: solid;
+	box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+}
+main {
+	grid-column: 2 / 5;
+	grid-row: 1;
+	background: gainsboro;
+	width: fit-content;
+	padding: 1rem;
+	border: solid;
+	border-radius: 10px;
+	box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+}
+main table {
+	margin-bottom: 2rem;
+}
+.sidebar {
+	grid-column: 1 / 2;
+	grid-row: 1;
+	justify-self: center;
+	background: gainsboro;
+	border: solid;
+	border-radius: 10px;
+	padding: 1rem;
+	margin-top: 0;
+	margin-right: 0;
+	height: max-content;
+	width: fit-content;
+	box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+}
+h1 {
+	background: gainsboro;
+	border: solid;
+	border-radius: 10px;
+	padding: 1rem;
+	box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+}
+h2 {
+	padding: 0 0.5rem 0.4rem 0;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	border: solid thin;
+	border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0))
+		1;
+	border-top: none;
+}
+nav a {
+	text-decoration: none;
+	color: crimson;
+}
+ul {
+	margin-top: 0rem;
+	margin-bottom: 1.5rem;
+}
+table {
+	border-collapse: collapse;
+	padding-top: 0;
+	margin-top: 0;
+}
+th,
+.grain {
+	color: red;
+	text-shadow: 0.05rem 0 white, -0.05rem 0 white, 0 0.05rem white,
+		0 -0.05rem white, 0.05rem 0.05rem white, -0.05rem -0.05rem white,
+		-0.05rem 0.05rem white, 0.05rem -0.05rem white, 0.2rem 0.2rem 0.2rem dimgrey;
+}
+td,
+th {
+	padding: 0.5rem;
+}
+footer {
+	background: gainsboro;
+	height: max-content;
+	border: solid;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+}
+footer table {
+	display: flex;
+	justify-content: center;
+}
+@media (max-width: 1050px) {
+	.sidebar {
+		grid-column: 1 / 6;
+		grid-row: 1 / 2;
+		width: auto;
+	}
+	.sidebar ul {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		gap: 0.5rem 2rem 0.5rem 2rem;
+	}
+	.sidebar li {
+		margin: 0 1rem;
+	}
+	.sidebar h2 {
+		text-align: center;
+	}
+	main {
+		grid-column: 1 / 5;
+		grid-row: 2 / 3;
+	}
+}
+@media (max-width: 750px) {
+	main {
+		grid-column: 1 / 6;
+		grid-row: 3 / 4;
+	}
+	.infocard {
+		grid-column: 1 / 6;
+		grid-row: 2 / 3;
+		width: fit-content;
+	}
+}
