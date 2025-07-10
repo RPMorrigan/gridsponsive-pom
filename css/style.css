@@ -161,6 +161,6 @@ footer table {
 	.infocard {
 		grid-column: 1 / 6;
 		grid-row: 2 / 3;
-		width: fit-content;
+		width: 100%;
 	}
 }
